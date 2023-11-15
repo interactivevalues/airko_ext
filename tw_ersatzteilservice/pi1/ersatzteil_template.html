@@ -1,0 +1,79 @@
+<!-- ###STEP1### -->
+<!-- ###ERROR_MSG###-->
+	<p  style="color:red">
+    	###ERROR###
+    </p>
+<!-- ###ERROR_MSG###-->
+<form name="ersatzteilservice" id="ersatzteilservice" method="post" action="###ACTION###">
+<input type="hidden" name="todo" value="" />
+<label for="sortiment">Sortimentsauswahl</label>
+<select name="sortiment" id="sortiment" onchange="document.ersatzteilservice.submit();">
+	<!-- ###SORTIMENT### -->
+    <option value="###SORTIMENT_ID###" ###SELECTED###>###SORTIMENT_NAME###</option>
+	<!-- ###SORTIMENT### -->
+</select>
+<h1>###AKT_SORTIMENT###</h1>
+<p>
+	<!-- ###MODELLGRUPPE### -->
+	<input type="radio" name="modell" id="modell" value="###MODELL_ID###" ###SELECTED###>###MODELL_NAME###<br />###MODELL_BESCHREIBUNG###<br />
+    <!-- ###MODELLGRUPPE### -->
+</p>
+<h1>Geben Sie bitte das gesuchte Modell an</h1>
+<p>
+	<label for="modell_suche">Modellnamen angeben</label><input type="text" name="modell_suche" id="modell_suche" value="">
+</p>
+<p>
+	<input type="checkbox" name="modell_all" id="modell_all" value="1"> Alle Modelle der Modellgruppe auflisten
+</p>
+<p>
+    <a href="javascript:document.ersatzteilservice.todo.value='step2'; document.ersatzteilservice.submit();">weiter</a>
+</p>
+</form>
+<!-- ###STEP1### -->
+
+<!-- ###STEP2### -->
+<form name="ersatzteilservice" id="ersatzteilservice" method="post" action="###ACTION###">
+<input type="hidden" name="todo" value="" />
+<p>
+	Bitte w&auml;hlen Sie aus der nachfolgenden Auswahlliste das gew&uuml;nschte Modell aus.
+</p>
+<p>
+	<label for="modellbezeichnung">Modellbezeichnung</label>
+    <select name="modellbezeichnung" id="modellbezeichnung">
+    	<!-- ###MODELLE### -->
+    	<option value="###MODELL_ID###">###MODELL_NAME###</option>
+        <!-- ###MODELLE### -->
+    </select>
+    <p>
+    <a href="javascript:history.back();">zur&uuml;ck</a><br />
+    <a href="javascript:document.ersatzteilservice.todo.value='step3'; document.ersatzteilservice.submit();">weiter</a>
+</p>
+</p>
+</form>
+<!-- ###STEP2### -->
+
+<!-- ###STEP3### -->
+<h1>###PRODUKT_NAME### (Bestellnummer: ###PRODUKT_BESTELLNUMMER###)</h1>
+<table width="100%" border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <th>Positionsnummer</td>
+    <th>Ersatzteil- Bestellnummer</td>
+    <th>Ersatzteilbezeichnung</td>
+    <th>Menge</td>
+    <th>Einheit</td>
+    <th>Preis [&euro;]</td>
+    <th>g&uuml;ltig bis</td>
+  </tr>
+  <!-- ###ERSATZTEIL### -->
+  <tr>
+    <td>###POSNUMMER###</td>
+    <td>###BESTELLNUMMER###</td>
+    <td>###BEZEICHNUNG###</td>
+    <td>###MENGE###</td>
+    <td>###EINHEIT###</td>
+    <td>###PREIS###</td>
+    <td>###GUELTIGBIS###</td>
+  </tr>
+  <!-- ###ERSATZTEIL### -->
+</table>
+<!-- ###STEP3### -->

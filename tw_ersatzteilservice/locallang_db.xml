@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'tw_ersatzteilservice'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_twersatzteilservice_sortiment">sortiment</label>
+			<label index="tx_twersatzteilservice_sortiment.bezeichnung">Bezeichnung</label>
+			<label index="tx_twersatzteilservice_modellgruppe">modellgruppe</label>
+			<label index="tx_twersatzteilservice_modellgruppe.bezeichnung">bezeichnung</label>
+			<label index="tx_twersatzteilservice_modellgruppe.untertitel">untertitel</label>
+			<label index="tx_twersatzteilservice_modellgruppe.fid_sortiment">sortiment</label>
+			<label index="tx_twersatzteilservice_produkt">produkt</label>
+			<label index="tx_twersatzteilservice_produkt.bezeichnung">bezeichnung</label>
+			<label index="tx_twersatzteilservice_produkt.bestellnummer">bestellnummer</label>
+			<label index="tx_twersatzteilservice_produkt.bild">bild</label>
+			<label index="tx_twersatzteilservice_produkt.fid_modellgruppe">modellgruppe</label>
+			<label index="tx_twersatzteilservice_produkt.fid_ersatzteil">ersatzteil</label>
+			<label index="tx_twersatzteilservice_ersatzteil">ersatzteil</label>
+			<label index="tx_twersatzteilservice_ersatzteil.bezeichnung">bezeichnung</label>
+			<label index="tx_twersatzteilservice_ersatzteil.bestellnummer">bestellnummer</label>
+			<label index="tx_twersatzteilservice_ersatzteil.beschreibung">beschreibung</label>
+			<label index="tx_twersatzteilservice_ersatzteil.preis">preis</label>
+			<label index="tx_twersatzteilservice_ersatzteil.einheit">einheit</label>
+			<label index="tx_twersatzteilservice_ersatzteil.fid_produkt">Produkt</label>
+			<label index="tx_twersatzteilservice_produkt_ersatzteil">produkt_ersatzteil</label>
+			<label index="tx_twersatzteilservice_produkt_ersatzteil.ersatzteilbezeichnung">ersatzteil</label>
+			<label index="tx_twersatzteilservice_produkt_ersatzteil.posnummer">positionsnummer</label>
+			<label index="tx_twersatzteilservice_produkt_ersatzteil.anzahl">anzahl</label>
+			<label index="tx_twersatzteilservice_produkt_ersatzteil.gueltigbis">gueltig Bis</label>
+			<label index="tx_twersatzteilservice_produkt_ersatzteil.produkt">Produkt</label>
+			<label index="tt_content.list_type_pi1">Ersatzteilservice</label>
+		</languageKey>
+	</data>
+</T3locallang>
