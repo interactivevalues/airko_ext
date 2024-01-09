@@ -42,9 +42,9 @@ return [
         ],
     ],
     'types' => [
-        '0' => ['showitem' => 'hidden;;1;;1-1-1, bezeichnung'],
+        '0' => ['showitem' => 'hidden, bezeichnung'],
     ],
     'palettes' => [
-        '1' => ['showitem' => ''],
+        
     ],
 ];

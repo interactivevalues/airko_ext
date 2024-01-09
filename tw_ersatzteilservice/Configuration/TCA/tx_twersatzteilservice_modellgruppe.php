@@ -52,18 +52,17 @@ return [
             'label' => 'LLL:EXT:tw_ersatzteilservice/locallang_db.xlf:tx_twersatzteilservice_modellgruppe.fid_sortiment',
             'config' => [
                 'type' => 'select',
+                'renderType' => 'selectSingle',
                 'foreign_table' => 'tx_twersatzteilservice_sortiment',
                 'foreign_table_where' => 'ORDER BY tx_twersatzteilservice_sortiment.uid',
-                'size' => 5,
-                'minitems' => 0,
-                'maxitems' => 20,
+                'size' => 1,
             ],
         ],
     ],
     'types' => [
-        '0' => ['showitem' => 'hidden;;1;;1-1-1, bezeichnung, untertitel, fid_sortiment'],
+        '0' => ['showitem' => 'hidden, bezeichnung, untertitel, fid_sortiment'],
     ],
     'palettes' => [
-        '1' => ['showitem' => ''],
+        
     ],
 ];

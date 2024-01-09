@@ -34,7 +34,8 @@ return [
             ]
         ],
         'bezeichnung' => [
-            'exclude' => 0,
+            
+
             'label' => 'LLL:EXT:tw_ersatzteilservice/locallang_db.xlf:tx_twersatzteilservice_produkt.bezeichnung',
             'config' => [
                 'type' => 'input',
@@ -43,7 +44,8 @@ return [
             ],
         ],
         'bestellnummer' => [
-            'exclude' => 0,
+            
+
             'label' => 'LLL:EXT:tw_ersatzteilservice/locallang_db.xlf:tx_twersatzteilservice_produkt.bestellnummer',
             'config' => [
                 'type' => 'input',
@@ -52,7 +54,8 @@ return [
             ],
         ],
         'bild' => [
-            'exclude' => 0,
+            
+
             'label' => 'LLL:EXT:tw_ersatzteilservice/locallang_db.xlf:tx_twersatzteilservice_produkt.bild',
             'config' => [
                 'type' => 'group',
@@ -67,7 +70,8 @@ return [
             ],
         ],
         'fid_modellgruppe' => [
-            'exclude' => 0,
+            
+
             'label' => 'LLL:EXT:tw_ersatzteilservice/locallang_db.xlf:tx_twersatzteilservice_produkt.fid_modellgruppe',
             'config' => [
                 'type' => 'select',
@@ -102,9 +106,9 @@ return [
         ],
     ],
     'types' => [
-        '0' => ['showitem' => 'hidden;;1;;1-1-1, bezeichnung, bestellnummer, bild, fid_modellgruppe, fid_ersatzteil'],
+        '0' => ['showitem' => 'hidden, bezeichnung, bestellnummer, bild, fid_modellgruppe, fid_ersatzteil'],
     ],
     'palettes' => [
-        '1' => ['showitem' => ''],
+        
     ],
 ];

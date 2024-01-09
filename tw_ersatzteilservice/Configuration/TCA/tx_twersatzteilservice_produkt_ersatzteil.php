@@ -28,24 +28,20 @@ return [
                     [
                         0 => '',
                         1 => '',
-                    ]
+                    ],
                 ],
-            ]
+            ],
         ],
         'ersatzteilbezeichnung' => [
-            'exclude' => 0,
             'label' => 'LLL:EXT:tw_ersatzteilservice/locallang_db.xlf:tx_twersatzteilservice_produkt_ersatzteil.ersatzteilbezeichnung',
             'config' => [
                 'type' => 'select',
                 'foreign_table' => 'tx_twersatzteilservice_ersatzteil',
                 'foreign_table_where' => 'ORDER BY tx_twersatzteilservice_ersatzteil.bestellnummer,tx_twersatzteilservice_ersatzteil.bezeichnung',
-                'size' => 20,
-                'minitems' => 1,
-                'maxitems' => 1,
+                'renderType' => 'selectSingle',
             ],
         ],
         'posnummer' => [
-            'exclude' => 0,
             'label' => 'LLL:EXT:tw_ersatzteilservice/locallang_db.xlf:tx_twersatzteilservice_produkt_ersatzteil.posnummer',
             'config' => [
                 'type' => 'input',
@@ -61,7 +57,6 @@ return [
             ],
         ],
         'anzahl' => [
-            'exclude' => 0,
             'label' => 'LLL:EXT:tw_ersatzteilservice/locallang_db.xlf:tx_twersatzteilservice_produkt_ersatzteil.anzahl',
             'config' => [
                 'type' => 'input',
@@ -77,7 +72,6 @@ return [
             ],
         ],
         'gueltigbis' => [
-            'exclude' => 0,
             'label' => 'LLL:EXT:tw_ersatzteilservice/locallang_db.xlf:tx_twersatzteilservice_produkt_ersatzteil.gueltigbis',
             'config' => [
                 'type' => 'input',
@@ -86,22 +80,19 @@ return [
             ],
         ],
         'produkt' => [
-            'exclude' => 0,
             'label' => 'LLL:EXT:tw_ersatzteilservice/locallang_db.xlf:tx_twersatzteilservice_produkt_ersatzteil.produkt',
             'config' => [
                 'type' => 'select',
                 'foreign_table' => 'tx_twersatzteilservice_produkt',
                 'foreign_table_where' => 'ORDER BY tx_twersatzteilservice_produkt.uid',
-                'size' => 20,
-                'minitems' => 1,
-                'maxitems' => 1,
+                'renderType' => 'selectSingle',
             ],
         ],
     ],
     'types' => [
-        '0' => ['showitem' => 'hidden;;1;;1-1-1, ersatzteilbezeichnung, posnummer, anzahl, gueltigbis, produkt'],
+        '0' => ['showitem' => 'hidden, ersatzteilbezeichnung, posnummer, anzahl, gueltigbis, produkt'],
     ],
     'palettes' => [
-        '1' => ['showitem' => ''],
+        
     ],
 ];
