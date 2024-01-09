@@ -1,6 +1,3 @@
-#
-# Table structure for table 'tx_twersatzteilservice_sortiment'
-#
 CREATE TABLE tx_twersatzteilservice_sortiment (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -16,11 +13,6 @@ CREATE TABLE tx_twersatzteilservice_sortiment (
 	KEY parent (pid)
 );
 
-
-
-#
-# Table structure for table 'tx_twersatzteilservice_modellgruppe'
-#
 CREATE TABLE tx_twersatzteilservice_modellgruppe (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -39,10 +31,6 @@ CREATE TABLE tx_twersatzteilservice_modellgruppe (
 );
 
 
-
-#
-# Table structure for table 'tx_twersatzteilservice_produkt'
-#
 CREATE TABLE tx_twersatzteilservice_produkt (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -62,11 +50,6 @@ CREATE TABLE tx_twersatzteilservice_produkt (
 	KEY parent (pid)
 );
 
-
-
-#
-# Table structure for table 'tx_twersatzteilservice_ersatzteil'
-#
 CREATE TABLE tx_twersatzteilservice_ersatzteil (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -86,11 +69,6 @@ CREATE TABLE tx_twersatzteilservice_ersatzteil (
 	KEY parent (pid)
 );
 
-
-
-#
-# Table structure for table 'tx_twersatzteilservice_produkt_ersatzteil'
-#
 CREATE TABLE tx_twersatzteilservice_produkt_ersatzteil (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,

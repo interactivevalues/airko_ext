@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2024-01-09T00:00:00Z">
+        <header>
+            <meta datatype="array">
+                <type>database</type>
+                <description>Language labels for database tables/fields belonging to extension 'tw_ersatzteilservice'
+                </description>
+            </meta>
+        </header>
+        <body>
+            <trans-unit id="tx_twersatzteilservice_sortiment">
+                <source>sortiment</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_sortiment.bezeichnung">
+                <source>Bezeichnung</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_modellgruppe">
+                <source>modellgruppe</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_modellgruppe.bezeichnung">
+                <source>bezeichnung</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_modellgruppe.untertitel">
+                <source>untertitel</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_modellgruppe.fid_sortiment">
+                <source>sortiment</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_produkt">
+                <source>product</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_produkt.bezeichnung">
+                <source>bezeichnung</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_produkt.bestellnummer">
+                <source>bestellnummer</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_produkt.bild">
+                <source>bild</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_produkt.fid_modellgruppe">
+                <source>modellgruppe</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_produkt.fid_ersatzteil">
+                <source>ersatzteil</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_ersatzteil">
+                <source>ersatzteil</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_ersatzteil.bezeichnung">
+                <source>bezeichnung</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_ersatzteil.bestellnummer">
+                <source>bestellnummer</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_ersatzteil.beschreibung">
+                <source>beschreibung</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_ersatzteil.preis">
+                <source>preis</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_ersatzteil.einheit">
+                <source>einheit</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_ersatzteil.fid_produkt">
+                <source>Produkt</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_produkt_ersatzteil">
+                <source>produkt_ersatzteil</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_produkt_ersatzteil.ersatzteilbezeichnung">
+                <source>ersatzteil</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_produkt_ersatzteil.posnummer">
+                <source>positionsnummer</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_produkt_ersatzteil.anzahl">
+                <source>anzahl</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_produkt_ersatzteil.gueltigbis">
+                <source>gueltig Bis</source>
+            </trans-unit>
+            <trans-unit id="tx_twersatzteilservice_produkt_ersatzteil.produkt">
+                <source>Produkt</source>
+            </trans-unit>
+            <trans-unit id="tt_content.list_type_pi1">
+                <source>Ersatzteilservice</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

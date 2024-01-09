@@ -1,0 +1,43 @@
+<h1>{product.bezeichnung}</h1>
+<h2>Bestellnummer: {product.bestellnummer}</h2>
+
+<f:if condition="{product.image}">
+    <f:image maxWidth="400" src="{product.image}"/>
+</f:if>
+
+<f:if condition="{spareparts}">
+    <table>
+        <tr>
+            <th>Positionsnummer</th>
+            <th>Ersatzteil- Bestellnummer</th>
+            <th>Ersatzteilbezeichnung</th>
+            <th>Menge</th>
+            <th>Einheit</th>
+            <th>Preis [&euro;]</th>
+            <th>g&uuml;ltig bis</th>
+        </tr>
+        <f:for each="{spareparts}" as="part">
+            <tr>
+                <td>{part.posnummer}</td>
+                <f:if condition="{part.ersatzteilbezeichnung}">
+                    <f:then>
+                        <td>{part.bestellnummer}</td>
+                        <td>{part.bezeichnung}</td>
+                    </f:then>
+                    <f:else>
+                        <td></td>
+                        <td></td>
+                    </f:else>
+                </f:if>
+                <td>{part.anzahl}</td>
+                <td>{part.einheit}</td>
+                <td>
+                    <f:if condition="{part.preis} && {part.ersatzteilbezeichnung}">
+                        {part.preis -> f:format.currency(decimalSeparator: ',', thousandsSeparator: '.')}
+                    </f:if>
+                </td>
+                <td>{f:if(condition:part.gueltigbis,then:part.gueltigbis,else:'aktuell')}</td>
+            </tr>
+        </f:for>
+    </table>
+</f:if>

@@ -1,0 +1,38 @@
+<f:form action="index" name="filter" object="{filter}">
+    <div>
+        <legend>
+            Sortiment
+            <f:form.select property="sortiment" options="{sortiment}" optionLabelField="bezeichnung" optionValueField="uid" prependOptionLabel="Bitte wählen" prependOptionValue="0" />
+        </legend>
+    </div>
+
+    <f:if condition="{filter.sortiment}">
+        <div>
+            <legend>
+                Modellgruppe
+                <f:form.select property="modelgroup" options="{modelgroups}" optionLabelField="bezeichnung" optionValueField="uid" prependOptionLabel="Bitte wählen" prependOptionValue="0" />
+            </legend>
+        </div>
+    </f:if>
+  <f:if condition="{filter.sortiment} && {filter.modelgroup}">
+
+      <f:if condition="{products}">
+          <f:then>
+              <h3>Ihre Modellauswahl</h3>
+              <table>
+                  <f:for each="{products}" as="product">
+                      <tr>
+                          <th>{product.bezeichnung}</th>
+                          <td><f:link.action action="product" arguments="{product:product.uid}">Anzeigen</f:link.action></td>
+                      </tr>
+                  </f:for>
+              </table>
+          </f:then>
+          <f:else>
+
+          </f:else>
+      </f:if>
+    </f:if>
+
+    <f:form.submit value="Absenden"/>
+</f:form>

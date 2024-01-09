@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2024-01-09T00:00:00Z">
+        <header>
+            <meta datatype="array">
+                <type>module</type>
+                <description>Language labels for extension 'tw_ersatzteilservice'</description>
+            </meta>
+        </header>
+        <body>
+            <trans-unit id="pi1_title">
+                <source>Ersatzteilservice</source>
+            </trans-unit>
+            <trans-unit id="pi1_plus_wiz_description">
+                <source>Ersatzteilservice</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

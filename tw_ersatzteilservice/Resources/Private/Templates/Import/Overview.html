@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+<f:layout name="Administration" />
+
+<f:section name="headline">
+    <h1>Import</h1>
+
+    <form action="{be:moduleLink(route: 'web_ersatzteilimport')}" method="post" enctype="multipart/form-data">
+
+    <label for="csv_file" style="width:150px; display:block; float:left;">Import-Datei:</label>
+    <input type="file" value="" id="csv_file" name="csv_file" required /><br />
+    <label for="tbl" style="width:150px; display:block; float:left;">Tabelle:</label>
+    <select name="tbl" id="tbl">
+        <!--<option value="produkt">Produkt</option>-->
+        <option value="ersatzteil">Ersatzteil</option>
+        <option value="produkt_ersatzteil">Produkt_Ersatzteil</option>
+    </select><br /><br />
+    <input type="hidden" value="uploadFile" name="uploadFile" />
+    <input type="submit" value="preview" name="action" id="sendIt" />
+    </form>
+</f:section>
+
+<f:section name="content">
+
+</f:section>
+
+</html>
