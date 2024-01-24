@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#subnavigation
+{
+	display:none;
+}
+
+#contentMain
+{
+	margin:0 0 0 35px;
+}
+
+.tx-twersatzteilservice-pi1 h1
+{
+	font-size:20px;
+	text-align:center;
+	width:620px;
+}
+
+.tx-twersatzteilservice-pi1 h1 span.small
+{
+	font-size:14px;
+}
+
+.tx-twersatzteilservice-pi1 p
+{
+	width:620px;
+}
+
+.tx-twersatzteilservice-pi1  h1 img
+{
+	border:none;
+	margin:0;
+}
+
+.tx-twersatzteilservice-pi1 img
+{
+	border:1px solid black;
+	margin:0 0 0 20px;
+}
+
+.ersatzteil
+{
+	font-size:10px;
+	margin:30px 0 0 0;
+}
+
+.ersatzteil th
+{
+	font-weight:bold;
+	text-align:left;
+	font-size:9px;
+	background-color:#FFFFFF;
+	padding:5px;
+	border:1px solid #666666;
+}
+
+.ersatzteil td
+{
+	padding:0 5px 0 5px;
+	font-size:12px;
+}
+
+.ersatzteil td.nr6
+{
+	text-align:right;
+}
+
+.leftButton:link, .leftButton:visited, .leftButton:hover, .leftButton:active
+{
+	width:300px;
+	margin:0 5px 5px 5px;
+	display:block;
+	float:left;
+	height:20px;
+	background-color:#666666;
+	color:#FFFFFF;
+	text-align:center;
+}
+
+.rightButton:link, .rightButton:visited, .rightButton:hover, .rightButton:active
+{
+	width:300px;
+	margin:0 0 5px 5px;
+	display:block;
+	float:left;
+	height:20px;
+	background-color:#666666;
+	color:#FFFFFF;
+	text-align:center;
+}

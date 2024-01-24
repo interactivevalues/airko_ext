@@ -1,0 +1,101 @@
+<!-- ###STEP1### -->
+<!-- ###ERROR_MSG###-->
+	<p  style="color:red">
+    	###ERROR###
+    </p>
+<!-- ###ERROR_MSG###-->
+<form name="ersatzteilservice" id="ersatzteilservice" method="post" action="###ACTION###">
+<input type="hidden" name="todo" value="" />
+<label for="sortiment" style="width:200px; display:block; float:left;"><strong>Sortiment:</strong></label>
+<select name="sortiment" id="sortiment" onchange="document.ersatzteilservice.submit();">
+	<!-- ###SORTIMENT### -->
+    <option value="###SORTIMENT_ID###" ###SELECTED###>###SORTIMENT_NAME###</option>
+	<!-- ###SORTIMENT### -->
+</select>
+<!-- ###MODELLGRUPPE_AUSWAHL### -->
+<br style="clear:left"  />
+<p>
+<label for="modellgruppe" style="width:200px; margin:0 0 10px 0; display:block; float:left;"><strong>Modellgruppe:</strong></label>
+	<select name="modellgruppe" id="modellgruppe" onchange="document.ersatzteilservice.submit();">
+	<!-- ###MODELLGRUPPE### -->
+	<option value="###MODELLGRUPPE_ID###" ###SELECTED###>###MODELLGRUPPE_NAME###</option>
+    <!-- ###MODELLGRUPPE### -->
+    </select>
+</p>
+<br style="clear:left" />
+<!-- ###MODELLGRUPPE_AUSWAHL### -->
+<!--
+<p>
+    <a href="javascript:document.ersatzteilservice.todo.value='step2'; document.ersatzteilservice.submit();">weiter</a>
+</p>
+-->
+<!-- ###MODELL_AUSWAHL### -->
+
+	<br /><p><strong>Ihre Modellauswahl:</strong></p>
+    
+    	<!-- ###MODELLE### -->
+    	<p style="width:220px; float:left; height:20px; margin:0 0 10px 0;">###MODELL_NAME###</p>
+        <p style=" width:150px; float:left; height:20px; margin:0 0 10px 0;">###URL###</p>
+        
+        <!-- ###MODELLE### -->
+
+<!-- ###MODELL_AUSWAHL### -->
+</form>
+<!-- ###STEP1### -->
+
+<!-- ###STEP2### -->
+<form name="ersatzteilservice" id="ersatzteilservice" method="post" action="###ACTION###">
+<input type="hidden" name="todo" value="" />
+<p>
+	Bitte w&auml;hlen Sie aus der nachfolgenden Auswahlliste das gew&uuml;nschte Modell aus.
+</p>
+<p>
+	<label for="modellbezeichnung">Modellbezeichnung</label>
+    <select name="modellbezeichnung" id="modellbezeichnung">
+    	<!-- ###MODELLE### -->
+    	<option value="###MODELL_ID###">###MODELL_NAME###</option>
+        <!-- ###MODELLE### -->
+    </select>
+    <p>
+    <a href="###ACTION###" class="leftButton">zur&uuml;ck</a>
+    <a href="javascript:document.ersatzteilservice.todo.value='step3'; document.ersatzteilservice.submit();" class="rightButton">weiter</a>
+</p>
+</p>
+</form>
+<!-- ###STEP2### -->
+
+<!-- ###STEP3### -->
+<h1>###PRODUKT_NAME### <span class="small">(Bestellnummer: ###PRODUKT_BESTELLNUMMER###)</span></h1>
+###PRODUKT_IMAGE###
+<table width="620" border="0" cellspacing="5" cellpadding="0" class="ersatzteil">
+  <tr>
+    <th>Pos.Nr.</th>
+    <th>Bestellnummer</th>
+    <th>Ersatzteilbezeichnung</th>
+    <th>ME</th>
+    <th>Einheit</th>
+    <th>Preis &euro;</th>
+    <th>g&uuml;ltig bis</th>
+  </tr>
+  <!-- ###ERSATZTEIL### -->
+  <tr>
+    <td width="30" class="nr1" valign="top">###POSNUMMER###</td>
+    <td width="50" class="nr2" valign="top">###BESTELLNUMMER###</td>
+    <td width="330" class="nr3" valign="top">###BEZEICHNUNG###</td>
+    <td width="40" class="nr4" valign="top">###MENGE###</td>
+    <td width="30" class="nr5" valign="top">###EINHEIT###</td>
+    <td width="40" class="nr6" valign="top">###PREIS###</td>
+    <td width="50" class="nr7" valign="top">###GUELTIGBIS###</td>
+  </tr>
+  <!-- ###ERSATZTEIL### -->
+</table>
+<p style="font-size:11px; text-align:right;">
+	###DATUM###<br />
+    Preise / Stk. exkl. MwSt.
+</p>
+<p id="actionBTN">
+	<a href="javascript:window.print();" class="leftButton">drucken</a>
+    <a href="javascript:history.back();" class="rightButton">anderes Modell</a>
+</p>
+
+<!-- ###STEP3### -->

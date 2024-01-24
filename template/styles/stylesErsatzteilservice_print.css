@@ -1,0 +1,136 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body, html
+{
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#subnavigation
+{
+	display:none;
+}
+
+
+#contentMain
+{
+	margin:0 0 0 35px;
+}
+
+#contentMain h1
+{
+	font-size:30px;
+}
+
+#contentMain div.tx-twersatzteilservice-pi1 h1
+{
+	font-size:20px;
+	text-align:center;
+	width:100%;
+	font-family:Arial, Helvetica, sans-serif;
+	display:block;
+}
+
+.tx-twersatzteilservice-pi1 h1 span.small
+{
+	font-size:14px;
+}
+
+.tx-twersatzteilservice-pi1 p
+{
+	width:680px;
+}
+
+.tx-twersatzteilservice-pi1  h1 img
+{
+	border:none;
+	margin:0;
+	
+}
+
+.tx-twersatzteilservice-pi1 img
+{
+	border:1px solid black;
+	margin:0 0 0 20px;
+}
+
+.ersatzteil
+{
+	font-size:10px;
+	margin:30px 0 0 0;
+	
+}
+
+.ersatzteil th
+{
+	font-weight:bold;
+	text-align:left;
+	font-size:9px;
+	background-color:transparent;
+	border:none;
+	padding:5px;
+	color:black;
+}
+
+.ersatzteil td
+{
+	padding:0 5px 0 5px;
+	font-size:12px;
+}
+
+.ersatzteil td.nr6
+{
+	text-align:right;
+}
+
+
+#rightBottomContentFolge
+{
+	font-size:11px;
+}
+
+#footer
+{
+	display:none;
+}
+
+#navigationContainerFolge
+{
+	display:none;
+}
+
+#actionBTN
+{
+	display:none;
+}
+
+#headerContainer
+{
+	width:680px;
+	overflow:hidden;
+	
+}
+
+#headerContainer img
+{
+	margin:0 0 0 -260px;
+	border:none;
+}
+
+#rightTopContentFolge
+{
+	display:none;
+}
+
+#rightBottomContentFolge
+{
+	width:180px;
+	position: relative;
+	color:black;
+}
+
+#rightBottomContentFolge h1
+{
+	color:black;
+	font-size:18px;
+}

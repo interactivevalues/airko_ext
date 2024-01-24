@@ -1,0 +1,100 @@
+ul.navi, ul.navi ul {
+	list-style-type: none;
+	margin:5px 0 0 0;
+	padding:0;
+}
+
+ul.navi li {
+	padding: 0;
+	margin: 0;
+	float: left;
+	height: auto;
+	list-style-type: none;
+	white-space: nowrap;
+	position:relative;
+}
+
+ul.navi li a {
+	color:#000000;
+	text-decoration:none;
+	display:block;
+	width:auto;
+	height:27px;
+	margin:0 28px 0 0;
+	font-weight:normal;
+	white-space:nowrap;
+}
+
+
+div#navigation div {
+    clear: left;
+  }
+
+ul.navi a:hover, ul#nav a:active, ul.navi .aktiv:link, ul.navi .aktiv:visited, ul.navi .aktiv:hover, ul.navi .aktiv:active {
+	color:#FFFFFF;
+}
+
+
+
+
+/* Für Unterpunkte keine Float-Eigenschaft */
+
+ul.navi ul li {
+	float:none;
+	height:auto;
+	white-space: normal;
+	background-color: transparent;
+	list-style-type: none;
+	border-bottom:1px solid white;
+	padding:0 5px 0 5px;
+	margin:0;
+}
+ul.navi ul li a{
+	text-decoration:none;
+	height:auto;
+	color:#000000;
+}
+
+ul.navi ul li a:link, ul.navi ul li a:visited, ul.navi ul li a:hover, ul.navi ul li a:active{
+	height:auto;
+}
+
+/* Links auf Unterpunkten sollen die Hintergrundfarbe ändern */
+
+ul.navi ul li:hover, ul.navi ul li:hover {
+	/*background-color:#FFFFFF;*/
+	color:#000000;
+	height:auto;
+}
+/* Zweite Ebene */
+
+ul.navi ul {
+	margin:0;
+	padding: 0;
+	position: absolute;
+	background-color: #d4d1ce;
+	display: none;
+	width: auto;
+	list-style-type: none;
+	
+}
+
+/* Zweite Ebene anzeigen */
+
+ul.navi li.hover ul, ul.navi li:hover ul {
+	margin:0;
+	padding: 0;
+	position: absolute;
+	background-color: #d4d1ce;
+	width: auto;
+	list-style-type: none;
+	display: block;
+	height:auto;
+}
+
+ul.navi li.menuparent {  }
+ 
+ul.navi li.menuparent:hover,
+ul.navi li.over { 
+	background-color: #f9f9f9; 
+}
