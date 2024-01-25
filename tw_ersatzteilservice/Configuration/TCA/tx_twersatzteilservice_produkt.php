@@ -53,33 +53,29 @@ return [
                 'eval' => 'required,trim',
             ],
         ],
-        'bild' => [
-            
-
-            'label' => 'LLL:EXT:tw_ersatzteilservice/locallang_db.xlf:tx_twersatzteilservice_produkt.bild',
-            'config' => [
-                'type' => 'group',
-                'internal_type' => 'file',
-                'allowed' => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
-                'max_size' => $GLOBALS['TYPO3_CONF_VARS']['BE']['maxFileSize'],
-                'uploadfolder' => 'uploads/tx_twersatzteilservice',
-                'show_thumbs' => 1,
-                'size' => 1,
-                'minitems' => 0,
-                'maxitems' => 1,
-            ],
-        ],
+//        'bild' => [
+//
+//
+//            'label' => 'LLL:EXT:tw_ersatzteilservice/locallang_db.xlf:tx_twersatzteilservice_produkt.bild',
+//            'config' => [
+//                'type' => 'group',
+//                'internal_type' => 'file',
+//                'allowed' => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
+//                'max_size' => $GLOBALS['TYPO3_CONF_VARS']['BE']['maxFileSize'],
+//                'uploadfolder' => 'uploads/tx_twersatzteilservice',
+//                'show_thumbs' => 1,
+//                'size' => 1,
+//                'minitems' => 0,
+//                'maxitems' => 1,
+//            ],
+//        ],
         'fid_modellgruppe' => [
-            
-
             'label' => 'LLL:EXT:tw_ersatzteilservice/locallang_db.xlf:tx_twersatzteilservice_produkt.fid_modellgruppe',
             'config' => [
                 'type' => 'select',
+                'renderType' => 'selectSingle',
                 'foreign_table' => 'tx_twersatzteilservice_modellgruppe',
                 'foreign_table_where' => 'ORDER BY tx_twersatzteilservice_modellgruppe.uid',
-                'size' => 5,
-                'minitems' => 0,
-                'maxitems' => 10,
             ],
         ],
         'fid_ersatzteil' => [
