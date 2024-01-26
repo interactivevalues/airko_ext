@@ -73,9 +73,9 @@ class ProductRepository
             ->fetchAssociative();
 
         if (is_array($row)) {
-            $imagePath = Environment::getPublicPath() . '/fileadmin/kundendaten/ersatzteilservice/' . $row['bestellnummer'] . '.jpg';
+            $imagePath = Environment::getPublicPath() . '/secure/airko/ersatzteilservice/' . $row['bestellnummer'] . '.jpg';
             if (is_file($imagePath)) {
-                $row['image'] = 'fileadmin/kundendaten/ersatzteilservice/' . $row['bestellnummer'] . '.jpg';
+                $row['image'] = 'secure/airko/ersatzteilservice/' . $row['bestellnummer'] . '.jpg';
             }
         }
         return $row;

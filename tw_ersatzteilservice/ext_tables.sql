@@ -61,6 +61,7 @@ CREATE TABLE tx_twersatzteilservice_ersatzteil (
 	bezeichnung varchar(255) DEFAULT '' NOT NULL,
 	bestellnummer varchar(255) DEFAULT '' NOT NULL,
 	beschreibung varchar(255) DEFAULT '' NOT NULL,
+    gueltigbis varchar(255) DEFAULT '' NOT NULL,
 	preis tinytext,
 	einheit varchar(255) DEFAULT '' NOT NULL,
 	fid_produkt int(11) DEFAULT '0' NOT NULL,
@@ -83,6 +84,7 @@ CREATE TABLE tx_twersatzteilservice_produkt_ersatzteil (
 	anzahl int(11) DEFAULT '0' NOT NULL,
 	gueltigbis varchar(255) DEFAULT '' NOT NULL,
 	produkt text,
+    preis tinytext,
 	
 	PRIMARY KEY (uid),
 	KEY parent (pid)
