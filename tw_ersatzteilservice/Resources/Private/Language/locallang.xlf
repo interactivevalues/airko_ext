@@ -14,6 +14,48 @@
             <trans-unit id="pi1_plus_wiz_description">
                 <source>Ersatzteilservice</source>
             </trans-unit>
+            <trans-unit id="sortiment">
+                <source>Sortiment</source>
+            </trans-unit>
+            <trans-unit id="modellgruppe">
+                <source>Modellgruppe</source>
+            </trans-unit>
+            <trans-unit id="modellauswahl">
+                <source>Ihre Modellauswahl</source>
+            </trans-unit>
+            <trans-unit id="anzeigen">
+                <source>Anzeigen</source>
+            </trans-unit>
+            <trans-unit id="absenden">
+                <source>Absenden</source>
+            </trans-unit>
+            <trans-unit id="auswaehlen">
+                <source>Bitte auswählen</source>
+            </trans-unit>
+            <trans-unit id="bestellnummer">
+                <source>Bestellnummer</source>
+            </trans-unit>
+            <trans-unit id="positionsnummer">
+                <source>Positionsnummer</source>
+            </trans-unit>
+            <trans-unit id="ersatzteilbestellnummer">
+                <source>Ersatzteil-Bestellnummer</source>
+            </trans-unit>
+            <trans-unit id="ersatzteilbezeichnung">
+                <source>Ersatzteilbezeichnung</source>
+            </trans-unit>
+            <trans-unit id="menge">
+                <source>Menge</source>
+            </trans-unit>
+            <trans-unit id="preis">
+                <source>Preis</source>
+            </trans-unit>
+            <trans-unit id="gueltigbis">
+                <source>gültig bis</source>
+            </trans-unit>
+            <trans-unit id="positionsnummer">
+                <source>Positionsnummer</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

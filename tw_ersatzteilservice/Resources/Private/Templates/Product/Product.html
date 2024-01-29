@@ -1,5 +1,5 @@
 <h1>{product.bezeichnung}</h1>
-<h2>Bestellnummer: {product.bestellnummer}</h2>
+<h2><f:translate key="bestellnummer" />: {product.bestellnummer}</h2>
 
 <f:if condition="{product.image}">
     <f:image maxWidth="600" src="{product.image}"/>
@@ -8,13 +8,13 @@
 <f:if condition="{spareparts}">
     <table>
         <tr>
-            <th>Positionsnummer</th>
-            <th>Ersatzteil- Bestellnummer</th>
-            <th>Ersatzteilbezeichnung</th>
-            <th>Menge</th>
-            <th>Einheit</th>
-            <th>Preis [&euro;]</th>
-            <th>g&uuml;ltig bis</th>
+            <th><f:translate key="positionsnummer" /></th>
+            <th><f:translate key="ersatzteilbestellnummer" /></th>
+            <th><f:translate key="ersatzteilbezeichnung" /></th>
+            <th><f:translate key="menge" /></th>
+            <th><f:translate key="einheit" /></th>
+            <th><f:translate key="preis" /></th>
+            <th><f:translate key="gueltigbis" /></th>
         </tr>
         <f:for each="{spareparts}" as="part">
             <tr>
