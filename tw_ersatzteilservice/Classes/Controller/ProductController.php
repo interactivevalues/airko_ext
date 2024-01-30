@@ -5,7 +5,6 @@ namespace InteractiveValues\TwErsatzteilservice\Controller;
 
 use InteractiveValues\TwErsatzteilservice\Domain\Model\Dto\Filter;
 use InteractiveValues\TwErsatzteilservice\Domain\Repository\ProductRepository;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 class ProductController extends ActionController
@@ -13,9 +12,9 @@ class ProductController extends ActionController
 
     protected ProductRepository $productRepository;
 
-    public function initializeAction()
+    public function __construct(ProductRepository $productRepository): void
     {
-        $this->productRepository = GeneralUtility::makeInstance(ProductRepository::class);
+        $this->productRepository = $productRepository;
     }
 
     public function indexAction(Filter $filter = null): void
