@@ -12,7 +12,7 @@ class ProductController extends ActionController
 
     protected ProductRepository $productRepository;
 
-    public function __construct(ProductRepository $productRepository): void
+    public function __construct(ProductRepository $productRepository)
     {
         $this->productRepository = $productRepository;
     }
