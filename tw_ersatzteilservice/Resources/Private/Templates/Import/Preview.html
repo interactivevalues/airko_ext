@@ -1,16 +1,44 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-    xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers"
-    data-namespace-typo3-fluid="true">
-<f:layout name="Administration" />
+      xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Administration"/>
 
 <f:section name="headline">
 
-    <h1>Voransicht</h1>
-    <f:debug>{_all}</f:debug>
 </f:section>
 
 <f:section name="content">
 
+    <h1>Voransicht</h1>
+    <p class="lead">Preisanpassung: {price}</p>
+
+
+    <f:if condition="{rows}">
+        <a href="{be:moduleLink(route: 'web_ersatzteilimport',arguments: {action:'updatePrice',price:price})}" class="btn btn-primary">Preis aktualisieren</a>
+        <br>
+
+        <table class="table table-condensed table-striped">
+            <thead>
+            <tr>
+                <th>Bestellnummer</th>
+                <th>Bezeichnung</th>
+                <th>alt</th>
+                <th>neu</th>
+            </tr>
+            </thead>
+            <tbody>
+            <f:for each="{rows}" as="r">
+                <tr>
+
+                    <td>{r.bestellnummer}</td>
+                    <td>{r.bezeichnung}</td>
+                    <td>{r.preis}</td>
+                    <td>{r.preis_new}</td>
+                </tr>
+            </f:for>
+            </tbody>
+        </table>
+    </f:if>
 </f:section>
 
 </html>
