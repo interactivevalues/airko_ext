@@ -56,8 +56,16 @@ class ImportController
         if ($price !== 0) {
             $rows = $this->getAllPriceRows();
             foreach ($rows as &$row) {
-                $surchargeAmount = (float)($row['preis'] * $price) / 100;
-                $row['preis_new'] = round($row['preis'] + $surchargeAmount, 2);
+                $oldPrize = str_replace(",",".",$row["preis"]);
+                if($price > 0){
+                    $percentChange = 1 + $price/100;
+                }else{
+                    $percentChange = 1 - $price*(-1)/100;
+                }
+                $newPrize = $oldPrize * $percentChange;
+                $newPrize = round($newPrize,1);
+                $newPrize = str_replace(".",",",$newPrize);
+                $row['preis_new'] = $newPrize;
             }
             $this->view->assignMultiple([
                 'price' => $price,
@@ -72,15 +80,23 @@ class ImportController
         if ($price !== 0) {
             $rows = $this->getAllPriceRows();
             foreach ($rows as &$row) {
-                $surchargeAmount = (float)($row['preis'] * $price) / 100;
-                $priceNew = round($row['preis'] + $surchargeAmount, 2);
+                $oldPrize = str_replace(",",".",$row["preis"]);
+                if($price > 0){
+                    $percentChange = 1 + $price/100;
+                }else{
+                    $percentChange = 1 - $price*(-1)/100;
+                }
+                $newPrize = $oldPrize * $percentChange;
+                $newPrize = round($newPrize,1);
+                $newPrize = str_replace(".",",",$newPrize);
+
                 $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_twersatzteilservice_ersatzteil');
                 $queryBuilder
                     ->update('tx_twersatzteilservice_ersatzteil')
                     ->where(
                         $queryBuilder->expr()->eq('uid', $row['uid'])
                     )
-                    ->set('preis', $priceNew)
+                    ->set('preis', $newPrize)
                     ->execute();
             }
             $this->view->assignMultiple([
