@@ -1,12 +1,12 @@
-<h1>{product.bezeichnung}</h1>
-<h2><f:translate key="bestellnummer" />: {product.bestellnummer}</h2>
+<h2>{product.bezeichnung}</h2>
+<h5><f:translate key="bestellnummer" />: {product.bestellnummer}</h5>
 
 <f:if condition="{product.image}">
-    <f:image maxWidth="600" src="{product.image}"/>
+    <f:image maxWidth="600" src="{product.image}" class="img-fluid mb-3"/>
 </f:if>
 
 <f:if condition="{spareparts}">
-    <table>
+    <table class="table table-responsive mb-5">
         <tr>
             <th><f:translate key="positionsnummer" /></th>
             <th><f:translate key="ersatzteilbestellnummer" /></th>
@@ -14,7 +14,7 @@
             <th><f:translate key="menge" /></th>
             <th><f:translate key="einheit" /></th>
             <th><f:translate key="preis" /></th>
-            <th><f:translate key="gueltigbis" /></th>
+            <th class="text-right"><f:translate key="gueltigbis" /></th>
         </tr>
         <f:for each="{spareparts}" as="part">
             <tr>
@@ -36,8 +36,9 @@
                         {part.preis -> f:format.currency(decimalSeparator: ',', thousandsSeparator: '.')}
                     </f:if>
                 </td>
-                <td>{f:if(condition:part.gueltigbis,then:part.gueltigbis,else:'aktuell')}</td>
+                <td class="text-right">{f:if(condition:part.gueltigbis,then:part.gueltigbis,else:'aktuell')}</td>
             </tr>
         </f:for>
     </table>
+    <a href="javascript:history.back();" class="btn btn-secondary"><f:translate key="back" /></a>
 </f:if>

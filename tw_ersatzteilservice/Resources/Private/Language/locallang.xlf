@@ -56,6 +56,9 @@
             <trans-unit id="positionsnummer">
                 <source>Positionsnummer</source>
             </trans-unit>
+            <trans-unit id="back">
+                <source>zurück zur Übersicht</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

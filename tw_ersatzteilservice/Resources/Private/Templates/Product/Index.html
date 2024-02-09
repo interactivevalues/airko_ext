@@ -2,7 +2,7 @@
     <div>
         <legend>
             <f:translate key="sortiment" />
-            <f:form.select property="sortiment" options="{sortiment}" optionLabelField="bezeichnung" optionValueField="uid" prependOptionLabel="{f:translate(key: 'auswaehlen')}" prependOptionValue="0" />
+            <f:form.select class="form-control" property="sortiment" options="{sortiment}" optionLabelField="bezeichnung" optionValueField="uid" prependOptionLabel="{f:translate(key: 'auswaehlen')}" prependOptionValue="0" />
         </legend>
     </div>
 
@@ -10,7 +10,7 @@
         <div>
             <legend>
                 <f:translate key="modellgruppe" />
-                <f:form.select property="modelgroup" options="{modelgroups}" optionLabelField="bezeichnung" optionValueField="uid" prependOptionLabel="{f:translate(key: 'auswaehlen')}" prependOptionValue="0" />
+                <f:form.select class="form-control" property="modelgroup" options="{modelgroups}" optionLabelField="bezeichnung" optionValueField="uid" prependOptionLabel="{f:translate(key: 'auswaehlen')}" prependOptionValue="0" />
             </legend>
         </div>
     </f:if>
@@ -19,11 +19,11 @@
       <f:if condition="{products}">
           <f:then>
               <h3><f:translate key="modellauswahl" /></h3>
-              <table>
+              <table class="mb-5 table table-responsive">
                   <f:for each="{products}" as="product">
                       <tr>
                           <th>{product.bezeichnung}</th>
-                          <td><f:link.action action="product" arguments="{product:product.uid}"><f:translate key="anzeigen" /></f:link.action></td>
+                          <td class="text-right"><f:link.action action="product" arguments="{product:product.uid}"><f:translate key="anzeigen" /></f:link.action></td>
                       </tr>
                   </f:for>
               </table>
@@ -34,5 +34,5 @@
       </f:if>
     </f:if>
 
-    <f:form.submit value="{f:translate(key: 'absenden')}"/>
+    <f:form.submit value="{f:translate(key: 'absenden')}" class="btn btn-secondary"/>
 </f:form>
