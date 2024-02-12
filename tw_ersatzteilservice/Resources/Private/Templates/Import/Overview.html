@@ -7,11 +7,11 @@
     <h1>Preisanpassungen</h1>
 
     <form action="{be:moduleLink(route: 'web_ersatzteilimport')}" method="post" enctype="multipart/form-data">
-        <p>Bitte geben sie die Prozentzahl der Preisanpassung im Eingabefeld ein.<br />Sollte die Anpassung eine Preisreduktion sein, einfach mit "-" eingeben. (-10)</p>
+        <p>Bitte geben Sie die Prozentzahl der Preisanpassung im Eingabefeld ein.<br />Sollte die Anpassung eine Preisreduktion sein, einfach mit "-" eingeben. (-10)</p>
     <label for="price" style="width:150px; display:block; float:left;">Preisanpassung:</label>
     <input type="number" value="" id="price" name="price" required /> %<br />
-
-    <input type="submit" value="Vorschau der Preisänderung" name="action" id="sendIt" />
+    <input type="hidden" name="action" value="preview" />
+    <input type="submit" value="Vorschau der Preisänderung" id="sendIt" />
     </form>
 </f:section>
 

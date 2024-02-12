@@ -107,6 +107,18 @@ class ProductRepository
         return $rows;
     }
 
+    public function updatePrice(int $productId, $newPrice): void
+    {
+        $queryBuilder = $this->getQueryBuilder('tx_twersatzteilservice_ersatzteil');
+        $queryBuilder
+            ->update('tx_twersatzteilservice_ersatzteil')
+            ->where(
+                $queryBuilder->expr()->eq('uid', $productId)
+            )
+            ->set('preis', $newPrice)
+            ->execute();
+    }
+
     protected function getQueryBuilder(string $tableName): QueryBuilder
     {
         return GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable($tableName);
