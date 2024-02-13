@@ -10,7 +10,6 @@ use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Backend\Template\ModuleTemplate;
 use TYPO3\CMS\Core\Authentication\BackendUserAuthentication;
 use TYPO3\CMS\Core\Core\Environment;
-use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Http\HtmlResponse;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Fluid\View\StandaloneView;
@@ -52,7 +51,7 @@ class ImportController
         $modification = (float)($request->getParsedBody()['price'] ?? 0);
 
         if ($modification !== 0) {
-            $rows = $this->getAllPriceRows();
+            $rows = $this->productRepository->getAllPriceRows();
             foreach ($rows as &$row) {
                 $newPrize = $this->calculateModifiedPrice($row['preis'], $modification);
                 $row['preis_new'] = $newPrize;
@@ -68,7 +67,7 @@ class ImportController
     {
         $modification = (float)($request->getQueryParams()['price'] ?? 0);
         if ($modification !== 0) {
-            $rows = $this->getAllPriceRows();
+            $rows = $this->productRepository->getAllPriceRows();
             foreach ($rows as &$row) {
                 $newPrice = $this->calculateModifiedPrice($row['preis'], $modification);
                 $this->productRepository->updatePrice($row['uid'], $newPrice);
@@ -92,20 +91,6 @@ class ImportController
         $new = round($new, 1);
         $new = str_replace('.', ',', (string)$new);
         return $new;
-    }
-
-    protected function getAllPriceRows()
-    {
-        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_twersatzteilservice_ersatzteil');
-        $rows = $queryBuilder
-            ->select('*')
-            ->from('tx_twersatzteilservice_ersatzteil')
-            ->where(
-                $queryBuilder->expr()->isNotNull('preis')
-            )
-            ->execute()
-            ->fetchAllAssociative();
-        return $rows;
     }
 
     protected function initializeView(string $templateName): void

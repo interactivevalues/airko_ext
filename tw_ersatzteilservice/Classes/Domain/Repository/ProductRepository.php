@@ -107,6 +107,20 @@ class ProductRepository
         return $rows;
     }
 
+    public function getAllPriceRows(): array
+    {
+        $queryBuilder = $this->getQueryBuilder('tx_twersatzteilservice_ersatzteil');
+        $rows = $queryBuilder
+            ->select('*')
+            ->from('tx_twersatzteilservice_ersatzteil')
+            ->where(
+                $queryBuilder->expr()->isNotNull('preis')
+            )
+            ->execute()
+            ->fetchAllAssociative();
+        return $rows;
+    }
+
     public function updatePrice(int $productId, $newPrice): void
     {
         $queryBuilder = $this->getQueryBuilder('tx_twersatzteilservice_ersatzteil');
