@@ -81,7 +81,7 @@ class ImportController
 
     protected function calculateModifiedPrice($preis, float $modification): string
     {
-        $oldPrize = str_replace(",", ".", $preis);
+        $oldPrize = (float)str_replace(",", ".", $preis);
         if ($modification > 0) {
             $percentChange = 1 + $modification / 100;
         } else {
