@@ -1,4 +1,4 @@
-<f:form action="index" name="filter" object="{filter}">
+<f:form action="index" name="filter" id="ersatzteil_filter" object="{filter}">
     <div>
         <legend>
             <f:translate key="sortiment" />
@@ -14,25 +14,36 @@
             </legend>
         </div>
     </f:if>
-  <f:if condition="{filter.sortiment} && {filter.modelgroup}">
+    <f:if condition="{filter.sortiment} && {filter.modelgroup}">
 
-      <f:if condition="{products}">
-          <f:then>
-              <h3><f:translate key="modellauswahl" /></h3>
-              <table class="mb-5 table table-responsive">
-                  <f:for each="{products}" as="product">
-                      <tr>
-                          <th>{product.bezeichnung}</th>
-                          <td class="text-right"><f:link.action action="product" arguments="{product:product.uid}"><f:translate key="anzeigen" /></f:link.action></td>
-                      </tr>
-                  </f:for>
-              </table>
-          </f:then>
-          <f:else>
+        <f:if condition="{products}">
+            <f:then>
+                <h3><f:translate key="modellauswahl" /></h3>
+                <table class="mb-5 table table-responsive">
+                    <f:for each="{products}" as="product">
+                        <tr>
+                            <th>{product.bezeichnung}</th>
+                            <td class="text-right"><f:link.action action="product" arguments="{product:product.uid}"><f:translate key="anzeigen" /></f:link.action></td>
+                        </tr>
+                    </f:for>
+                </table>
+            </f:then>
+            <f:else>
 
-          </f:else>
-      </f:if>
+            </f:else>
+        </f:if>
     </f:if>
-
-    <f:form.submit value="{f:translate(key: 'absenden')}" class="btn btn-secondary"/>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('ersatzteil_filter');
+            if(form) {
+                let selects = form.getElementsByTagName('select');
+                for(let i = 0; i < selects.length; i++) {
+                    selects[i].addEventListener('change', function() {
+                        form.submit();
+                    });
+                }
+            }
+        });
+    </script>
 </f:form>
